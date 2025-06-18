@@ -4,9 +4,11 @@ import './App.css'
 import { useState } from 'react'
 import Counter from './anotherComponent.jsx'
 import Toggle from './Toggle.jsx'
+import User from './User.jsx'
 
 function App() {
   const [fruit, setFruit] = useState('Apple');
+  const [name, setName] = useState(true);
 
   const change = () => setFruit('Banana');
   const change1 = () => setFruit('Papaya');
@@ -23,6 +25,13 @@ function App() {
       
       <Counter /> 
       <Toggle />
+      <button onClick={()=>setName(!name)}>Change Name</button>
+    {
+        name?<User/> :null
+    }
+
+    
+     
     </>
   )
 }
