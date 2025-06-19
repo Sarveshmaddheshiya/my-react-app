@@ -11,6 +11,12 @@ function App() {
 
    const  items = ['Apple', 'Banana', 'Cherry', 'Mango', 'Orange']
 
+   let Details={
+    name: 'John',
+    age: 25,
+    occupation: 'Software Developer'
+   }
+
   const [fruit, setFruit] = useState('Apple');
   const [name, setName] = useState(true);
 
@@ -37,7 +43,9 @@ function App() {
     }
        <hr></hr>
 
-<Props items={items}/>
+{/* <Props items={items}/> */}
+
+<Props intro={Details}/>
 
     </>
   )
