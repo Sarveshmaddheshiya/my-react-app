@@ -5,8 +5,11 @@ import { useState } from 'react'
 import Counter from './anotherComponent.jsx'
 import Toggle from './Toggle.jsx'
 import User from './User.jsx'
+import Props_ from './Props.jsx'
 
 function App() {
+
+
   const [fruit, setFruit] = useState('Apple');
   const [name, setName] = useState(true);
 
@@ -22,16 +25,19 @@ function App() {
       <button onClick={change}>Change Fruit Name 0</button>
       <button onClick={change1}>Change Fruit Name 1</button>
       <button onClick={change2}>Change Fruit Name 2</button>
-      
+      <hr></hr>
       <Counter /> 
+         <hr></hr>
       <Toggle />
+         <hr></hr>
       <button onClick={()=>setName(!name)}>Change Name</button>
     {
         name?<User/> :null
     }
+       <hr></hr>
 
-    
-     
+<Props_ name="Sarvesh" age={25} address={"Gorakhpur"} />
+
     </>
   )
 }
