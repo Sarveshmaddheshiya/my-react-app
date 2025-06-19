@@ -5,10 +5,11 @@ import { useState } from 'react'
 import Counter from './anotherComponent.jsx'
 import Toggle from './Toggle.jsx'
 import User from './User.jsx'
-import Props_ from './Props.jsx'
+import Props from './Props.jsx'
 
 function App() {
 
+   const  items = ['Apple', 'Banana', 'Cherry', 'Mango', 'Orange']
 
   const [fruit, setFruit] = useState('Apple');
   const [name, setName] = useState(true);
@@ -36,7 +37,7 @@ function App() {
     }
        <hr></hr>
 
-<Props_ name="Sarvesh" age={25} address={"Gorakhpur"} />
+<Props items={items}/>
 
     </>
   )

@@ -1,15 +1,19 @@
-function Props_(name,age, address)
-{
-    return (
+import React from 'react';
 
+function Props({ items })
+ {
+  // Mapping through items array and creating <h3> elements
+  const newArray = items.map(
+    (num, index) => {
+    return <h3 key={index}>{num}</h3>;
+  });
 
-       <>
-        <h1>User Component for Props </h1>
-        <h1>{name}</h1>
-        <h1>{age}</h1>
-        <h1>{address}</h1>
-       </>
-    )
+  return (
+    <>
+      <h1>Passing values from another component using Props</h1>
+      {newArray}
+    </>
+  );
 }
 
-export default Props_;
+export default Props;
