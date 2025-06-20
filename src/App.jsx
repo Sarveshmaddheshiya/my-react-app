@@ -7,6 +7,8 @@ import Toggle from './Toggle.jsx'
 import User from './User.jsx'
 import Props from './Props.jsx'
 import ObjectProps from './ObjectProps.jsx'
+import Wrapper from './Wrapper.jsx'
+
 
 function App() {
 
@@ -49,6 +51,10 @@ function App() {
 
 <hr/>
 <ObjectProps   UserDetails={Details}/>
+<hr/>
+<Wrapper>
+   <p>I am jsx data and passed from another component </p>
+</Wrapper>
 
     </>
   )
