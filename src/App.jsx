@@ -11,6 +11,8 @@ import Wrapper from './Wrapper.jsx'
 import DefaultValue from './DefaultValue.jsx'
 import ButtonClickProps from './ButtonClickProps.jsx'
 
+import Value from './GetInput.jsx'
+
 
 function App() {
 
@@ -68,7 +70,7 @@ function App() {
 <button onClick={()=>setStudent("Sarvesh")}>Change Student Name</button>
 */}
 
-<h1>Sarvesh</h1>
+<Value/>
     </>
   )
 }
