@@ -6,6 +6,7 @@ import Counter from './anotherComponent.jsx'
 import Toggle from './Toggle.jsx'
 import User from './User.jsx'
 import Props from './Props.jsx'
+import ObjectProps from './ObjectProps.jsx'
 
 function App() {
 
@@ -43,9 +44,11 @@ function App() {
     }
        <hr></hr>
 
-{/* <Props items={items}/> */}
+<Props items={items}/>
 
-<Props intro={Details}/>
+
+<hr/>
+<ObjectProps   UserDetails={Details}/>
 
     </>
   )
