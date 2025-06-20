@@ -8,9 +8,13 @@ import User from './User.jsx'
 import Props from './Props.jsx'
 import ObjectProps from './ObjectProps.jsx'
 import Wrapper from './Wrapper.jsx'
+import DefaultValue from './DefaultValue.jsx'
+import ButtonClickProps from './ButtonClickProps.jsx'
 
 
 function App() {
+
+   const [student, setStudent] = useState("Vinay")
 
    const  items = ['Apple', 'Banana', 'Cherry', 'Mango', 'Orange']
 
@@ -29,7 +33,7 @@ function App() {
 
   return (
     <>
-      <center><h1>React Learning</h1></center>
+      {/*<center><h1>React Learning</h1></center>
       
       <h1>{fruit}</h1>
       <button onClick={change}>Change Fruit Name 0</button>
@@ -56,6 +60,15 @@ function App() {
    <p>I am jsx data and passed from another component </p>
 </Wrapper>
 
+<hr/>
+<DefaultValue name="Sarvesh " />   
+<DefaultValue />                
+<hr/>
+<ButtonClickProps name={student}/>
+<button onClick={()=>setStudent("Sarvesh")}>Change Student Name</button>
+*/}
+
+<h1>Sarvesh</h1>
     </>
   )
 }
