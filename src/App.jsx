@@ -12,7 +12,7 @@ import DefaultValue from './DefaultValue.jsx'
 import ButtonClickProps from './ButtonClickProps.jsx'
 
 import Value from './GetInput.jsx'
-
+import Data from './Form.jsx'
 
 function App() {
 
@@ -68,9 +68,15 @@ function App() {
 <hr/>
 <ButtonClickProps name={student}/>
 <button onClick={()=>setStudent("Sarvesh")}>Change Student Name</button>
-*/}
+
 
 <Value/>
+
+*/}
+
+
+
+<Data/>
     </>
   )
 }
