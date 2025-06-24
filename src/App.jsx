@@ -13,6 +13,9 @@ import ButtonClickProps from './ButtonClickProps.jsx'
 
 import Value from './GetInput.jsx'
 import Data from './Form.jsx'
+import Check from './HandleCheckbox.jsx'
+import Table from './Table.jsx'
+
 
 function App() {
 
@@ -77,7 +80,12 @@ function App() {
 
 
 <Data/>
-    </>
+<hr/>
+<Check/>
+<hr/>
+<Table/>
+</>
+   
   )
 }
 
