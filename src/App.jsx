@@ -15,7 +15,8 @@ import Value from './GetInput.jsx'
 import Data from './Form.jsx'
 import Check from './HandleCheckbox.jsx'
 import Table from './Table.jsx'
-
+import Loop from './Loop.jsx'
+import ReuseComponent from './Reuse-component.jsx'
 
 function App() {
 
@@ -84,6 +85,11 @@ function App() {
 <Check/>
 <hr/>
 <Table/>
+
+<hr/>
+<Loop/>
+<hr/>
+<ReuseComponent/>
 </>
    
   )

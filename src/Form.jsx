@@ -10,7 +10,7 @@ function Data()
     return(
 <>
 <h1>Controlled Component</h1>
-<form Action="" method="POST">   
+<form >   
 <label>Name:</label>
 <input type="text" placeholder="Enter Your Name" onChange={(event) => setName(event.target.value)} />
 
