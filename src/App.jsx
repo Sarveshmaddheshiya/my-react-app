@@ -17,6 +17,9 @@ import Check from './HandleCheckbox.jsx'
 import Table from './Table.jsx'
 import Loop from './Loop.jsx'
 import ReuseComponent from './Reuse-component.jsx'
+import Clock from './Clock.jsx';
+import College from './College.jsx';
+
 
 function App() {
 
@@ -36,6 +39,64 @@ function App() {
   const change = () => setFruit('Banana');
   const change1 = () => setFruit('Papaya');
   const change2 = () => setFruit('Mango');
+
+  const[color,setColor]=useState('orange');
+
+   // nested loop data 
+
+ const collegeData = [
+  {
+    name: "NIIT",
+    city: "Gorakhpur",
+    website: "www.niit.com",
+    students: [
+      { name: "Aman Singh", age: 20, address: "Rajendra Nagar, Gorakhpur" },
+      { name: "Priya Verma", age: 19, address: "Civil Lines, Gorakhpur" },
+      { name: "Ravi Yadav", age: 21, address: "Basharatpur, Gorakhpur" }
+    ]
+  },
+  {
+    name: "ABC Institute",
+    city: "Lucknow",
+    website: "www.abcinstitute.com",
+    students: [
+      { name: "Anjali Sharma", age: 20, address: "Hazratganj, Lucknow" },
+      { name: "Vikram Chauhan", age: 22, address: "Gomti Nagar, Lucknow" },
+      { name: "Nisha Khan", age: 21, address: "Alambagh, Lucknow" }
+    ]
+  },
+  {
+    name: "XYZ College",
+    city: "Kanpur",
+    website: "www.xyzcollege.com",
+    students: [
+      { name: "Deepak Jaiswal", age: 23, address: "Kidwai Nagar, Kanpur" },
+      { name: "Sneha Tiwari", age: 20, address: "Swaroop Nagar, Kanpur" },
+      { name: "Arjun Patel", age: 22, address: "Kalyanpur, Kanpur" }
+    ]
+  },
+  {
+    name: "Sunrise University",
+    city: "Varanasi",
+    website: "www.sunriseuniversity.com",
+    students: [
+      { name: "Megha Singh", age: 21, address: "BHU Campus, Varanasi" },
+      { name: "Saurabh Gupta", age: 20, address: "Lanka, Varanasi" },
+      { name: "Kajal Mishra", age: 22, address: "Sigra, Varanasi" }
+    ]
+  },
+  {
+    name: "Techno World College",
+    city: "Allahabad",
+    website: "www.technoworld.edu",
+    students: [
+      { name: "Rahul Pandey", age: 19, address: "Civil Lines, Allahabad" },
+      { name: "Pooja Singh", age: 21, address: "Kareli, Allahabad" },
+      { name: "Manish Kumar", age: 22, address: "Jhunsi, Allahabad" }
+    ]
+  }
+];
+
 
   return (
     <>
@@ -90,6 +151,33 @@ function App() {
 <Loop/>
 <hr/>
 <ReuseComponent/>
+<hr/>
+
+<select onChange={(event)=>setColor(event.target.value)}>
+   <option>----Select Colors----</option>
+   <option value={"red"}>Red</option>
+   <option value={"blue"}>Blue</option>
+   <option value={"aqua"}>Aqua</option>
+    <option value={"green"}>Green</option>
+</select>
+<Clock color={color}/>
+<hr/>
+<h1>Nested Looping </h1>
+{
+   collegeData.map((college,index)=>(
+      <div key={index}>
+      {/* <h3>College Name: {college.name}</h3>
+       <h3>College city: {college.city}</h3>
+        <h3>College website: {college.website}</h3>
+        <hr/> */}
+        <College Data={college}/>
+      </div>
+   ))
+   
+}
+<hr/>
+
+
 </>
    
   )
